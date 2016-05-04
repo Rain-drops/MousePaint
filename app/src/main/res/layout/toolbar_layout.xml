@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    app:layout_scrollFlags="scroll|enterAlways"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+    <!--通过app:layout_scrollFlags属性来控制,滚动时候的表现.其中有4种Flag的类型.
+        1.Scroll 表示向下滚动时,这个View会被滚出屏幕范围直到隐藏.
+
+        2.enterAlways 表示向上滚动时,这个View会随着滚动手势出现,直到恢复原来的位置.
+
+        3.enterAlwaysCollapsed: 当你的视图已经设置minHeight属性又使用此标志时，你的视图只能已最小高度进入，
+        只有当滚动视图到达顶部时才扩大到完整高度。
+
+        4.exitUntilCollapsed: this flag causes the view to scroll off until it is ‘collapsed’ (its minHeight) before exiting。
+    -->

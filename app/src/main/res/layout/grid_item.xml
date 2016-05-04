@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!-- CardView 属于Support v7 里面的新的Widget.  扩展于FrameLayout，
+    UI显示主要包括
+    1.边框圆角
+    2.有阴影Shadow
+    用来突出个性，比如展览，相册等。 -->
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0.75dp"
+        >
+        <!--阴影-->
+        <!--app:cardCornerRadius="0dp"-->
+        <!--app:cardElevation="0.75dp"-->
+        <LinearLayout
+            android:id="@+id/ll_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/grid_item_bg">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:src="@drawable/ss"
+                    android:scaleType="centerCrop"/>
+                <!-- centerCrop  按比例扩大图片的size居中显示，使得图片长(宽)等于或大于View的长(宽) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+                    <!-- 一条线 -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/material_red"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:id="@+id/title_LastChapter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue_bg"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:padding="4dp"
+                        android:singleLine="true"
+                        android:text="ROKO"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+                    <!-- android:ellipsize=”end”——省略号显示在结尾  "encyc..." -->
+                </LinearLayout>
+                <!-- 点击订阅时弹出的小红心 -->
+                <com.sgj.john.mousepaint.customview.FavorLayout
+                    android:id="@+id/favor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.sgj.john.mousepaint.customview.FavorLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="Hover"
+                android:text="海贼王 811话"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:padding="4dp"/>
+            <TextView
+                android:id="@+id/tv_item_explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="人的梦想是不会完结的"
+                android:textSize="12dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="2dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="4dp"
+                android:maxLines="5"
+                android:ellipsize="end"/>
+            <TextView
+                android:id="@+id/tv_item_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2015-12-27"
+                android:padding="4dp"
+                android:textSize="12dp"/>
+            <TextView
+                android:id="@+id/tv_item_subscribe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="+订阅"
+                android:gravity="right"
+                android:textColor="#ff5722"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

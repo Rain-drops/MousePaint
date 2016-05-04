@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sgj.john.MaterialRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:id="@+id/refreshlayout" >
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--app:overlay="false"-->
+    <!--app:progress_colors="@array/material_colors"-->
+    <!--app:wave_color="@color/window_background"-->
+
+
+    <!-- 该控件用于在有限的窗口中展示大量数据集.例如：ListView、GridView。 -->
+    <!-- http://blog.csdn.net/lmj623565791/article/details/45059587 -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:paddingTop="4dp"
+        android:clickable="false"
+        android:scrollbars="vertical"
+        android:scrollbarSize="4dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@color/material_orange" >
+
+    </android.support.v7.widget.RecyclerView>
+
+    
+    <!--android:clipToPadding属性的使用说明示例-->
+    <!--该属性的解释:-->
+    <!--Defines whether the ViewGroup will clip its drawing surface so as to exclude the padding area.-->
+    <!--什么意思呢?就是说:-->
+    <!--clipToPadding属性定义了是否允许ViewGroup在padding中绘制,该值默认为true,即不允许.-->
+    <!--所以若我们给ListView设置了android:paddingTop="70dip" android:paddingBottom="70dip"-->
+    <!--那么我们可以看到ListView的头部以上和尾部以下都占有70大小的padding,在滑动ListView的过程-->
+    <!--中这个padding当然是存在的.在padding部分是看不到ListView的item的,本质上是在这两部分没有绘制-->
+    <!--我们的ListView-->
+    <!--假若我们此时为ListView设置属性android:clipToPadding="false",同样再滑动ListView此时可以-->
+    <!--发现在ListView的头部以上和尾部以下都占有70大小的padding部分依然可以显示我们的ListView的-->
+    <!--item,本质上是在这两部分绘制了我们的ListView-->
+    <!-- -->
+    <!--该属性很适合的应用场景:-->
+    <!--设置ListView的第一个(最后一个)Item距离屏幕TOP(BOTTOM)有一段距离的情况-->
+
+</com.sgj.john.MaterialRefreshLayout>

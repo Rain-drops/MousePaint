@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MosuePaint</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- activity_home -->
+    <string name="edit_text_search_hint">请输入漫画的名字</string>
+
+    <integer-array name="material_colors">
+        <item>@color/material_red</item>
+        <item>@color/brownness</item>
+        <item>@color/material_orange</item>
+    </integer-array>
+    <string name="title_activity_web">WebActivity</string>
+    <string name="title_activity_detial">DetialActivity</string>
+    <string name="title_activity_recommend">RecommendActivity</string>
+    <string name="title_activity_week">WeekActivity</string>
+</resources>

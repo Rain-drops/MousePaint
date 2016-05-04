@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_thumb_up_black_48dp"
+            android:title="最新漫画"></item>
+        <item android:id="@+id/nav_category"
+            android:icon="@drawable/ic_dashboard_black_48dp"
+            android:title="漫画分类"/>
+        <item android:id="@+id/nav_subscribe"
+            android:icon="@drawable/ic_stars_black_48dp"
+            android:title="精选漫画">
+            </item>
+    </group>
+    <item android:title="其他">
+        <menu>
+            <item android:id="@+id/setting"
+                android:icon="@drawable/ic_settings_applications_black_48dp"
+                android:title="设置"></item>
+            <item android:id="@+id/help"
+                android:icon="@drawable/ic_help_black_48dp"
+                android:title="帮助"></item>
+
+        </menu>
+    </item>
+
+</menu>
